@@ -20,7 +20,7 @@ public class Basico04 {
     private static int c;
     private static int d;
 
-    private static void calcularSeries(){
+    public static void calcularSeries(){
         a = -5 + 8 * 6;
         b = (55+9) % 9;
         c = 20 + -3*5 / 8;

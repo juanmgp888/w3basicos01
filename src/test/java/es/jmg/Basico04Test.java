@@ -11,17 +11,18 @@ public class Basico04Test {
 
     @Test
     public void testCalcularSeries() {
-        int a = -5 + 8 * 6;
-        int b = (55+9) % 9;
-        int c = 20 + -3*5 / 8;
-        int d = 5 + 15 / 3 * 2 - 8 % 3;
 
-        // Al ser un método estático que no devuleve valores,
+        // Si el método calcularSeries en Basico04.java le pongo como privado en lugar de público,
+        // no podría acceder a él desde aquí para el test y que iniciara las variables.
+        // Anteriormente lo tenía privado y lo que hacía era iniciar aquí las variables y no llamar a ese método.
+        Basico04.calcularSeries();
+        
+        // Al ser un método estático que no devuelve valores,
         // nos remitimos al retorno de las variables en sus getters
         
-        assertEquals(43, a);
-        assertEquals(1, b);
-        assertEquals(19, c);
-        assertEquals(13, d);
+        assertEquals(43, Basico04.getA());
+        assertEquals(1, Basico04.getB());
+        assertEquals(19, Basico04.getC());
+        assertEquals(13, Basico04.getD());
     }
 }
